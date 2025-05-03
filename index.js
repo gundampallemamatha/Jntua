@@ -2,17 +2,18 @@ import express from "express";
 import mongoose from "mongoose";
 import Student from './schemas/student.js'
 import fee from './schemas/fees.js'
+import dotenv from 'dotenv';
 
-
+dotenv.config();
 const app=express();
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log("mongodb is connected")
 })
-.catch(()=>{
-    console.log("connection not successful")
+.catch((err)=>{
+    console.log("connection not successful", err.message )
 })
 
 app.get("/dashboard",(req,res)=>{
