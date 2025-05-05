@@ -1,8 +1,8 @@
-import express from "express";
-import mongoose from "mongoose";
-import Student from './schemas/student.js'
-import fee from './schemas/fees.js'
-import dotenv from 'dotenv';
+const express=require("express");
+const mongoose=require("mongoose");
+const Student=require('./schemas/student.js');
+const  fee=require ('./schemas/fees.js');
+const dotenv=require('dotenv');
 
 dotenv.config();
 const app=express();
@@ -64,5 +64,6 @@ app.get('/studentfee/:id',async(req,res)=>{
 app.listen(4000,()=>{
     console.log("server is running")
 })
+
 
 

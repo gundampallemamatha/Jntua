@@ -1,11 +1,11 @@
-import express from "express";
-import mongoose from "mongoose";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import cors from "cors";
-import dotenv from "dotenv";
-import {Navigate} from "react-router-dom";
-import User from "./schemas/user.js";
+const express=require("express");
+const mongoose=require ("mongoose");
+const bcrypt=require("bcrypt");
+const jwt =require("jsonwebtoken");
+const cors= require("cors");
+const dotenv=require( "dotenv");
+// import {Navigate} from "react-router-dom";
+const User=require("./schemas/user.js");
 
 dotenv.config();
 const app = express();

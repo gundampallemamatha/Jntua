@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 // import Student from "./schemas/student.js";
 
 const FeeSchema=new mongoose.Schema({
