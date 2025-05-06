@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('./test');
+const app = require('./testing');
 
 describe("API Tests", ()=>{
     it('GET /api/health should return status ok',async()=>{
